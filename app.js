@@ -1,22 +1,28 @@
-
-
 const express = require('express');
 const app = express();
+
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
 
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname+("/view/home.html"))
+app.get('/', function(req, res){
+    res.render("login");
+})
+app.get("/signup", function(req,res){
+  res.render("signup");
+})
+app.get("/home", function(req,res){
+  res.render("home");
 })
 
 app.get("/english_dasshutsu_game", function(req,res){
-  res.sendFile(__dirname+"/view/quiz.html");
+  res.render("quiz");
 })
 
 app.get("/finish", function(req,res){
-  res.sendFile(__dirname+"/view/finish.html");
+  res.render("finish");
 })
 
 app.listen(3000, () => {

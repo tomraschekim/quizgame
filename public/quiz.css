@@ -4,6 +4,8 @@ body{
 }
 .container{
     padding: 5%;
+    margin: auto;
+
 }
 .questionbox{
     border-style: solid;
@@ -12,16 +14,10 @@ body{
     width: 60%;
     margin: auto;
 }
-.qnum{
-    margin-top: 30px;
-    margin-right: 60%;
-
+h3{
+    padding: 5%;
 }
 
-
-.word{
-    font-size: 30px;
-}
 
 button {
     margin:2%;
