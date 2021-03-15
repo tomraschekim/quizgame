@@ -1,5 +1,4 @@
 
-
 const express = require('express');
 const app = express();
 
@@ -9,8 +8,16 @@ app.use(express.static('public'))
 
 
 
-app.get('/', (req, res) => {
-    res.render("home");
+
+app.get('/', function(req, res){
+    res.render("login");
+})
+app.get("/signup", function(req,res){
+  res.render("signup");
+})
+app.get("/home", function(req,res){
+  res.render("home");
+
 })
 
 app.get("/english_dasshutsu_game", function(req,res){
