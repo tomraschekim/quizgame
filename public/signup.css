@@ -1,7 +1,7 @@
 
 	body {
 		color: #999;
-		background-color:#F0F8FF;
+		background-color:#3b5998;
 		font-family: "Roboto", sans-serif;
 		padding: 5%;
 	}
@@ -69,3 +69,4 @@
 	.signup-form form a:hover {
 		text-decoration: underline;
 	}
+	
