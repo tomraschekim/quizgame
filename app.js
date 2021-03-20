@@ -73,6 +73,18 @@ app.get("/logout", function(req,res){
   res.redirect("/");
 })
 
+app.get("/create", function(req,res){
+  res.render("create");
+})
+
+app.get("/test", function(req,res){
+  res.render("test");
+})
+
+app.get("/toeic", function(req,res){
+  res.render("toeic");
+})
+
 // post
 app.post("/signup", function(req,res){
   User.register({username: req.body.username},req.body.password, function (err, userregistered){
