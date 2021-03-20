@@ -85,6 +85,10 @@ app.get("/toeic", function(req,res){
   res.render("toeic");
 })
 
+app.get("/vocab", function(req,res){
+  res.render("vocab");
+})
+
 // post
 app.post("/signup", function(req,res){
   User.register({username: req.body.username},req.body.password, function (err, userregistered){
