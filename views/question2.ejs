@@ -135,7 +135,7 @@
 
     function clickhandler(e){
         if(quiz[quizindex].correct===e.target.innerHTML){
-            alert("突破！");
+            alert("Correct!");
             quizindex++;
 
             if(quizindex<quizlength){
@@ -146,7 +146,7 @@
                 window.location.href = "/finish";
         }
         }else{
-            alert("残念！不正解！");
+            alert("Oops! Try Again!");
         }
         
         
