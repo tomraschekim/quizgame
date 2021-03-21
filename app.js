@@ -89,6 +89,14 @@ app.get("/vocab", function(req,res){
   res.render("vocab");
 })
 
+app.get("/question2", function(req,res){
+  res.render("question2");
+})
+
+app.get("/question", function(req,res){
+  res.render("question");
+})
+
 // post
 app.post("/signup", function(req,res){
   User.register({username: req.body.username},req.body.password, function (err, userregistered){

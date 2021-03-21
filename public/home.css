@@ -8125,10 +8125,11 @@
     border-top-width: 0px;
     border-left-width: 0px;
     border-right-width: 0px;
-    height: 15%;
+    height: 10%;
     width: 50%;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 6%;
+    padding-top: 2%;
   }
   .vocablist:hover{
     background-color:#3b5998;
@@ -8141,4 +8142,38 @@
   }
   .title:hover{
     color: white;
+  }
+  .round {
+    text-decoration: none;
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: black;
+  }
+  .round:hover{
+    background-color: #ddd;
+    color: black;
+  }
+  .questionbox{
+    margin: auto;
+    text-align: center;
+  }
+  .option, .start{
+    background-color:#3b5998;
+    border-width: 0px;
+    height: 50px;
+    width: 50%;
+    margin-top: 3%;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+  }
+  .option:hover, .start:hover{
+    background-color: #3561be;
+  }
+  .qnum{
+    font-size: 40px;
+    margin-bottom: 2%;
+    margin-top: 5%;
   }
