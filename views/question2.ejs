@@ -1,27 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocab Quiz</title>
-    <link rel="stylesheet" href="questions.css">
-</head>
-<body>
-    <div class="container">
-        <h1><strong>英単語脱出ゲーム</strong></h1>
-            <div class="questionbox">
-                <h3 class="qnum">Question <span id="number">1</span></h3>
-                <h3 id="vocab" class="word">問題</h3>
-                <button>1</button>
-                <br>
-                <button>2</button>
-                <br>
-                <button>3</button>
-                <br>
-                <button type="button">4</button>
-            </div>
+  <head>
+  	<title>Sidebar 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4 pt-5">
+		  		<h1>Vocab Escape</h1>
+	        <ul class="list-unstyled components mb-5">
+			  <li>
+				<a href="/home">Home</a>
+			  </li>
+	          <li>
+	            <a href="/create">Create</a>
+	          </li>
+	          <li>
+              	<a href="/test">Test</a>
+	          </li>
+			  <li>
+				<a href="/toeic">TOEIC Vocab</a>
+			  </li>
+			  <li>
+				<a href="/logout">Log Out</a>
+			  </li>
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5 questionbox">
+            <h3 class="qnum">Question <span id="number">1</span></h3>
+            <h3 id="vocab" class="word">問題</h3>
+            <button class="option">1</button>
+            <br>
+            <button class="option">2</button>
+            <br>
+            <button class="option">3</button>
+            <br>
+            <button class="option">4</button>
     </div>
+</div>
 <script>
 
     const quiz = [
@@ -73,7 +113,7 @@
 
     const number = 0;
     const correct = "寝る";
-    const $button = document.getElementsByTagName("button");
+    const $button = document.getElementsByClassName("option");
     var buttonindex = 0;
     const buttonlength = $button.length;
     const quizlength = quiz.length;
@@ -118,18 +158,10 @@
         clickhandler(e);
     })
     }
-    
-
-
-
-
-    
-
-
-    
-
-
-
 </script>
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
