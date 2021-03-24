@@ -97,6 +97,11 @@ app.get("/question", function(req,res){
   res.render("question");
 })
 
+app.get("/edit", function(req,res){
+  res.render("edit");
+})
+
+
 // post
 app.post("/signup", function(req,res){
   User.register({username: req.body.username},req.body.password, function (err, userregistered){
