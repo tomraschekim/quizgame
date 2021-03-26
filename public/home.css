@@ -8207,3 +8207,8 @@
     font-size: 400%;
     margin-top: 3%;
   }
+  .trash{
+    background-color: white;
+    border-width: 0px;
+    margin-bottom: 1%;
+  }
