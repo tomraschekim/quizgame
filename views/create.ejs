@@ -49,66 +49,27 @@
         <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5 pt-5">
         <div class="testbox">
-            <form action="/">
+            <form class="wrapper" action="/">
               <div class="item">
                 <p>Title:</p>
                 <div class="name-item">
                   <input type="text" name="name" placeholder="Enter a title of your flashcard deck">
                 </div>
               </div>
-              <div class="item">
+              <div id="item">
                 <p>List:</p>
-                <div class="list-item">
+                <div id="term" class="list-item">
                   <input type="text" name="term" placeholder="Enter term" />
                   <input type="text" name="definition" placeholder="Enter definition" />
                 </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div class="list-item">
-                    <input type="text" name="term" placeholder="Enter term" />
-                    <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
-                <div style="visibility: hidden" class="moreTerms list-item">
-                  <input type="text" name="term" placeholder="Enter term" />
-                  <input type="text" name="definition" placeholder="Enter definition" />
-                </div>
+              </div>
 
               <div class="btn-block">
-                <button id="click-me" value='hide/show' type="button" class="createbutton add hideshow">+ ADD CARD</button>
+                <button id="click-me" onclick="addTerm()" type="button" class="createbutton add">+ ADD CARD</button>
               </div>
       
               <div class="btn-block">
-                <button  class="createbutton create" type="submit">CREATE</button>
+                <button class="createbutton create" type="submit">CREATE</button>
               </div>
             </form>
           </div>
@@ -117,21 +78,15 @@
       </div>
 		</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-
-$(function () {
-    $("#click-me").click(function () {
-        document.getElementById('list').style.backgroundColor = "red";
-        return false;
-    });
-});
-
-jQuery(document).ready(function(){
-    jQuery('.hideshow').live('click', function(event) {        
-         jQuery('#moreTerms').toggle('show');
-    });
-});
-</script>
+    
+    <script>
+      function addTerm(){
+        var item = document.getElementById("term");
+        var clone = item.cloneNode(true);
+        document.getElementById("item").appendChild(clone);
+      } 
+    </script>
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
