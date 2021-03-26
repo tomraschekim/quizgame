@@ -98,17 +98,17 @@
                     <input type="text" name="term" placeholder="Enter term" />
                     <input type="text" name="definition" placeholder="Enter definition" />
                 </div>
-                <div id="moreTerms" class="list-item">
+                <div style="visibility: hidden" class="moreTerms list-item">
                   <input type="text" name="term" placeholder="Enter term" />
                   <input type="text" name="definition" placeholder="Enter definition" />
                 </div>
 
               <div class="btn-block">
-                <button" class="createbutton add">+ ADD CARD</button>
+                <button id="click-me" value='hide/show' type="button" class="createbutton add hideshow">+ ADD CARD</button>
               </div>
       
               <div class="btn-block">
-                <button class="createbutton create" type="submit">CREATE</button>
+                <button  class="createbutton create" type="submit">CREATE</button>
               </div>
             </form>
           </div>
@@ -116,7 +116,22 @@
         
       </div>
 		</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
 
+$(function () {
+    $("#click-me").click(function () {
+        document.getElementById('list').style.backgroundColor = "red";
+        return false;
+    });
+});
+
+jQuery(document).ready(function(){
+    jQuery('.hideshow').live('click', function(event) {        
+         jQuery('#moreTerms').toggle('show');
+    });
+});
+</script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
