@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="loginsignup.css">
     <title>Document</title>
 </head>
 <body>
@@ -13,8 +13,8 @@
       <h1><strong>Vocab-Escape</strong></h1>
         <div class="form">
           <form action="/login" class="login-form" method="POST">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" placeholder="password"/>
+            <input type="text" name="username" required="required" placeholder="username"/>
+            <input type="password" name="password" required="required" placeholder="password"/>
             <button type="submit">login</button>
             <p class="message">Not registered? <a href="/signup">Create an account</a></p>
           </form>
