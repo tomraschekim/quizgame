@@ -1,43 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Sign up Form Horizontal</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="signup.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <link rel="stylesheet" href="loginsignup.css">
+    <title>Document</title>
 </head>
 <body>
-<div class="signup-form">
-    <form action="/signup" method="POST" class="form-horizontal">
-		<div class="col-xs-8 col-xs-offset-4">
-			<h2>SIGNUP</h2>
-		</div>		
-        <div class="form-group">
-			<label class="control-label col-xs-4">Username</label>
-			<div class="col-xs-8">
-                <input type="text" class="form-control" name="username" required="required">
-            </div>        	
+    <div class="login-page">
+      <h1><strong>Vocab-Escape</strong></h1>
+        <div class="form">
+          <form action="/signup" class="login-form" method="POST">
+            <input type="text" name="username" required="required" placeholder="username"/>
+            <input type="password" name="password" required="required" placeholder="password" />
+            <button type="submit">SIGNUP</button>
+          </form>
         </div>
-		<div class="form-group">
-			<label class="control-label col-xs-4">Password</label>
-			<div class="col-xs-8">
-                <input type="password" class="form-control" name="password" required="required">
-            </div>        	
-        </div>
-		<!-- <div class="form-group"> -->
-			<!-- <label class="control-label col-xs-4">Confirm Password</label> -->
-			<!-- <div class="col-xs-8"> -->
-                <!-- <input type="password" class="form-control" name="confirm_password" required="required"> -->
-            <!-- </div>        	 -->
-        <!-- </div> -->
-		<div class="form-group">
-			<div class="col-xs-8 col-xs-offset-4">
-				<button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
-			</div>  
-		</div>		      
-    </form>
-</div>
+      </div>
+     <script>$('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+     });</script> 
 </body>
 </html>
