@@ -29,9 +29,13 @@ const userSchema = new mongoose.Schema ({
   password: String
 });
 
+
+
+
 userSchema.plugin(passportLocalMongoose);
 
 const User = new mongoose.model("User", userSchema)
+
 
 passport.use(User.createStrategy());
 
@@ -48,9 +52,11 @@ app.use(express.static('public'))
 app.get('/', function(req, res){
     res.render("login");
 })
+
 app.get("/signup", function(req,res){
   res.render("signup");
 })
+
 app.get("/home", function(req,res){
   if(req.isAuthenticated){
     res.render("home");
@@ -58,14 +64,6 @@ app.get("/home", function(req,res){
     res.redirect("login");
   }
 
-})
-
-app.get("/english_dasshutsu_game", function(req,res){
-  res.render("quiz");
-})
-
-app.get("/finish", function(req,res){
-  res.render("finish");
 })
 
 app.get("/logout", function(req,res){
@@ -77,24 +75,8 @@ app.get("/create", function(req,res){
   res.render("create");
 })
 
-app.get("/test", function(req,res){
-  res.render("test");
-})
-
-app.get("/toeic", function(req,res){
-  res.render("toeic");
-})
-
 app.get("/vocab", function(req,res){
   res.render("vocab");
-})
-
-app.get("/question2", function(req,res){
-  res.render("question2");
-})
-
-app.get("/question", function(req,res){
-  res.render("question");
 })
 
 app.get("/edit", function(req,res){
@@ -131,6 +113,9 @@ app.post("/signup", function(req,res){
     })
   })
 
+  app.post("/create", function(req,res){
+
+  })
 
 
 
