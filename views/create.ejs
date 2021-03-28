@@ -80,11 +80,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
-      function addTerm(){
-        var item = document.getElementById("term");
-        var clone = item.cloneNode(true);
-        document.getElementById("item").appendChild(clone);
-      } 
+     $(document).ready(function() {
+  $(".add").click(function() {
+    $("#term")
+      .eq(0)
+      .clone()
+      .find("input").val("").end() // ***
+      .show()
+      .insertAfter("#term:last");
+  })});
+
     </script>
     
     <script src="js/jquery.min.js"></script>
