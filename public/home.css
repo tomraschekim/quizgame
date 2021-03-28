@@ -8074,40 +8074,50 @@
   .create{
     background-color: #3b5998;
   }
-  .flip-card {
-    background-color: transparent;
-    width: 60%;
-    height: 40%;
-    perspective: 1000px;
+  .card-container {
+    display: grid;
+    perspective: 700px;
+    position:relative;
     margin: auto;
-    margin-top: 5%;
   }
-  
-  .flip-card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  .card-flip {
+      height: 200px;
+      display: grid;
+      grid-template: 1fr / 1fr;
+      grid-template-areas: "frontAndBack";
+      transform-style: preserve-3d;
+      transition: all 0.7s ease;
   }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  .card-block{
+    margin-top: auto;
+    margin-bottom: auto;
   }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .card-title{
+    font-size: 230%;
   }
- 
-  .flip-card-back {
-    transform: rotateY(180deg);
+  .front {
+      grid-area: frontAndBack;
   }
+
+  .back {
+      grid-area: frontAndBack;
+      transform: rotateY(-180deg);
+  }
+
+  #flipCard:checked + .card-flip {
+      transform: rotateY(180deg);
+  }
+
+  label.flipCard{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    cursor:pointer;
+    z-index:9999;
+  }
+
   .term, .definition {
     color: black;
     font-family: "Roboto", sans-serif;
@@ -8157,37 +8167,15 @@
     background-color: #ddd;
     color: black;
   }
-  .questionbox{
-    margin: auto;
-    text-align: center;
-  }
-  .option, .start{
-    background-color:#3b5998;
-    border-width: 0px;
-    height: 50px;
-    width: 50%;
-    margin-top: 3%;
-    text-align: center;
-    color: white;
-    border-radius: 5px;
-  }
-  .option:hover, .start:hover, .edit:hover, .create:hover{
+
+  .edit:hover, .create:hover{
     background-color: #3561be;
   }
-  .qnum{
-    font-size: 40px;
-    margin-bottom: 2%;
-    margin-top: 5%;
-  }
+ 
   .homecontainer{
     text-align: center;
   }
-  .startfinish{
-    margin-top: 20%;
-  }
-  .start{
-    margin-top: 5%;
-  }
+
   .edit{
     background-color:#3b5998;
     display:block;
