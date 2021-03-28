@@ -63,7 +63,7 @@
                 <div id="term" class="list-item">
                   <input type="text" name="term" placeholder="Enter term" />
                   <input type="text" name="definition" placeholder="Enter definition" />
-                  <Button id="trash" type="button" class="trash"><i class="fa fa-trash"></i></Button> 
+                  <Button id="trash" type="button" onclick="setup()" class="trash"><i class="fa fa-trash"></i></Button> 
                 </div>
               </div>
 
@@ -83,14 +83,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
-      
+     $(document).ready(function() {
+  $(".add").click(function() {
+    $("#term")
+      .eq(0)
+      .clone()
+      .find("input").val("").end() // ***
+      .show()
+      .insertAfter("#term:last");
+    
+  })});
+  $('#item').on('click', "#trash", function() {
+      $(this).closest('#term').remove();
+    });
 
-      function addTerm(){
-        var item = document.getElementById("term");
-        var clone = item.cloneNode(true);
-        document.getElementById("item").appendChild(clone);
-      } 
-
+ 
 
     </script>
     <script src="js/jquery.min.js"></script>
