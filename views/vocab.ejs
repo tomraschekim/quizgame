@@ -46,16 +46,28 @@
         <!-- Page Content  -->
       <div id="content" class="homecontainer">
 			<h1 class="toptitle">Titile</h1>
-        <div class="flip-card">
-            <div class="flip-card-inner" >
-              <div class="flip-card-front">
-                <h1 class="term">term</h1>
-              </div>
-              <div class="flip-card-back">
-                  <h3 class="definition">definition</h3>
-              </div>
-            </div>
-        </div>    
+			<div class="col-md-6 card-container">
+				<label class="flipCard" for="flipCard"></label>
+				<input type="checkbox" id="flipCard" hidden />
+				  <div class="card-flip">
+					<!-- Card Front -->
+					<div class="card front">
+					  <div class="card-block">
+						<h3 class="card-title">Term</h3>
+					  </div>
+					</div>
+					<!-- End Card Front -->
+			
+					<!-- Card 2 Back -->
+					<div class="card back">
+					  <div class="card-block">
+						<h3 class="card-title">definition</h3>				
+					  </div>
+					</div>
+					<!-- End Card 2 Back -->
+				  </div>
+				</div>
+				<!-- End Card 2 -->
 		<div class="buttons">
 			<a href="#" class="previous round">&#8249;</a>
 			<a href="#" class="next round">&#8250;</a> 
